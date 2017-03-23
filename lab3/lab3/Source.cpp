@@ -3,6 +3,7 @@
 #include <math.h>
 #include <vector>
 using namespace std;
+GLint angle = 15;
 GLfloat gfPosX = 0.0;
 GLfloat gfPosY = 0.0;
 GLfloat gfPosXm = 1.0;
@@ -39,6 +40,7 @@ void Draw()
 		glEnd();
 	}
 	glColor3f(1.0, 1.0, 0.0);
+	glPushMatrix();
 	glBegin(GL_LINE_STRIP);
 
 	glVertex2d(gfPosX, gfPosY);
@@ -76,6 +78,7 @@ void Draw()
 	glVertex2d(gfPosX, gfPosY);
 	glEnd();
 	glRectd(gfPosX, gfPosY, gfPosX + .05, gfPosY + .05);
+	glPopMatrix();
 	gfTab += 0.0005;
 	gfPosX = .5*cos(gfTab) + .5;
 	gfPosY = .5*sin(gfTab)*1.75;
@@ -94,6 +97,7 @@ void Draw()
 
 	glEnd();
 	glFlush();
+	angle += 15;
 	gfTab2 += 0.0005;
 	gfPosXm = .5*-cos(gfTab2) + .5;
 	gfPosYm = .5*-sin(gfTab2)*1.75;
