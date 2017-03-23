@@ -32,6 +32,7 @@
             this.canvas = new Tao.Platform.Windows.SimpleOpenGlControl();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // canvas
@@ -46,17 +47,18 @@
             this.canvas.DepthBits = ((byte)(16));
             this.canvas.Location = new System.Drawing.Point(1, -2);
             this.canvas.Name = "canvas";
-            this.canvas.Size = new System.Drawing.Size(555, 358);
+            this.canvas.Size = new System.Drawing.Size(607, 358);
             this.canvas.StencilBits = ((byte)(0));
             this.canvas.TabIndex = 0;
+            this.canvas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.canvas_KeyDown);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(612, 28);
+            this.button1.Location = new System.Drawing.Point(614, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Запустити";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -64,11 +66,22 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(614, 70);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1.Size = new System.Drawing.Size(75, 153);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "Щоб зменшити щільність туману, натисніть \"-\". Щоб збільшити - \"+\"";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 356);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.canvas);
             this.Name = "Form1";
@@ -84,6 +97,7 @@
         private Tao.Platform.Windows.SimpleOpenGlControl canvas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
