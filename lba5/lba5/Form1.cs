@@ -130,6 +130,7 @@ namespace lba5
             conus = Glu.gluNewQuadric();
             SetTextureCylinder();
             SetTextureCone();
+            
         }
         float g_FogDensity = 0.2f;
         float[] fogColor = { 0.5f, 0.5f, .5f, 1.0f };
@@ -156,6 +157,7 @@ namespace lba5
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            canvas.BackgroundImage = Image.FromFile(@"Images\background.png");
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);
             Gl.glLoadIdentity();
 
