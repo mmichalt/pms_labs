@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.canvas = new Tao.Platform.Windows.SimpleOpenGlControl();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -43,6 +44,7 @@
             this.canvas.AutoMakeCurrent = true;
             this.canvas.AutoSwapBuffers = true;
             this.canvas.BackColor = System.Drawing.Color.Black;
+            this.canvas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("canvas.BackgroundImage")));
             this.canvas.ColorBits = ((byte)(32));
             this.canvas.DepthBits = ((byte)(16));
             this.canvas.Location = new System.Drawing.Point(1, -2);

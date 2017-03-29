@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>lab4 - Copy</title>
+<!-- write your code here -->
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script>
+(function (lib, img, cjs, ss, an) {
+var p; // shortcut to reference prototypes
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
+lib.ssMetadata = [
+		{name:"lab4 _ Copy_atlas_", frames: [[569,242,285,298],[0,0,567,640],[569,0,427,240],[998,0,12,39],[1012,0,12,39],[998,41,12,39]]}
+];
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != cur) {		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {		
+		cur = textInst;		
+		while(cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
+// symbols:
+(lib._1 = function() {
+	this.spriteSheet = ss["lab4 _ Copy_atlas_"];
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+(lib.evergreen296830_640 = function() {
+	this.spriteSheet = ss["lab4 _ Copy_atlas_"];
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+(lib.picture = function() {
+	this.spriteSheet = ss["lab4 _ Copy_atlas_"];
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+(lib.road1 = function() {
+	this.spriteSheet = ss["lab4 _ Copy_atlas_"];
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+(lib.road2 = function() {
+	this.spriteSheet = ss["lab4 _ Copy_atlas_"];
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+(lib.road3 = function() {
+	this.spriteSheet = ss["lab4 _ Copy_atlas_"];
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+// helper functions:
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
+(lib.tree = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib._1();
+	this.instance.parent = this;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.tree, new cjs.Rectangle(0,0,285,298), null);
+(lib.Symbol13 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib.road2();
+	this.instance.parent = this;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Symbol13, new cjs.Rectangle(0,0,12,39), null);
+(lib.Symbol12 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib.road1();
+	this.instance.parent = this;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Symbol12, new cjs.Rectangle(0,0,12,39), null);
+(lib.Symbol11 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib.road3();
+	this.instance.parent = this;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Symbol11, new cjs.Rectangle(0,0,12,39), null);
+(lib.Symbol10 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib.road2();
+	this.instance.parent = this;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Symbol10, new cjs.Rectangle(0,0,12,39), null);
+(lib.Symbol9 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib.road1();
+	this.instance.parent = this;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Symbol9, new cjs.Rectangle(0,0,12,39), null);
+(lib.Symbol3 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib.evergreen296830_640();
+	this.instance.parent = this;
+	this.instance.setTransform(12,25,0.041,0.076);
+	this.instance_1 = new lib.evergreen296830_640();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(5,11,0.041,0.076);
+	this.instance_2 = new lib.evergreen296830_640();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(0,0,0.041,0.076);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Symbol3, new cjs.Rectangle(0,0,35.1,73.7), null);
+(lib.Symbol2 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 1
+	this.instance = new lib.tree();
+	this.instance.parent = this;
+	this.instance.setTransform(30,25,0.102,0.168,0,0,0,142.5,149.1);
+	this.instance_1 = new lib.tree();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(23,31,0.102,0.168,0,0,0,142.5,149.1);
+	this.instance_2 = new lib.tree();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(14.5,40.6,0.102,0.168,0,0,0,142.5,149.1);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Symbol2, new cjs.Rectangle(0,0,44.5,65.6), null);
+// stage content:
+(lib.lab4Copy = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Layer 10
+	this.instance = new lib.Symbol3();
+	this.instance.parent = this;
+	this.instance.setTransform(283,90.7,1,1,0,0,0,17.6,36.9);
+	this.instance._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(75).to({_off:false},0).wait(1).to({regX:17.5,regY:36.8,scaleX:1.08,scaleY:1.06,x:286.2,y:94.2},0).wait(1).to({scaleX:1.17,scaleY:1.12,x:289.6,y:97.9},0).wait(1).to({scaleX:1.25,scaleY:1.18,x:292.9,y:101.6},0).wait(1).to({scaleX:1.33,scaleY:1.24,x:296.2,y:105.3},0).wait(1).to({scaleX:1.42,scaleY:1.3,x:299.5,y:108.9},0).wait(1).to({scaleX:1.5,scaleY:1.36,x:302.9,y:112.5},0).wait(1).to({scaleX:1.58,scaleY:1.42,x:306.2,y:116.2},0).wait(1).to({scaleX:1.66,scaleY:1.48,x:309.5,y:119.9},0).wait(1).to({scaleX:1.75,scaleY:1.54,x:312.9,y:123.5},0).wait(1).to({scaleX:1.83,scaleY:1.6,x:316.2,y:127.2},0).wait(1).to({scaleX:1.91,scaleY:1.66,x:319.6,y:130.9},0).wait(1).to({scaleX:2,scaleY:1.72,x:322.9,y:134.5},0).wait(1).to({scaleX:2.08,scaleY:1.78,x:326.2,y:138.1},0).wait(1).to({scaleX:2.16,scaleY:1.85,x:329.6,y:141.8},0).wait(1).to({scaleX:2.25,scaleY:1.91,x:332.9,y:145.5},0).wait(1).to({scaleX:2.33,scaleY:1.97,x:336.2,y:149.2},0).wait(1).to({scaleX:2.41,scaleY:2.03,x:339.5,y:152.8},0).wait(1).to({scaleX:2.49,scaleY:2.09,x:342.9,y:156.4},0).wait(1).to({scaleX:2.58,scaleY:2.15,x:346.2,y:160.1},0).wait(1).to({scaleX:2.66,scaleY:2.21,x:349.5,y:163.8},0).wait(1).to({scaleX:2.74,scaleY:2.27,x:352.9,y:167.5},0).wait(1).to({scaleX:2.83,scaleY:2.33,x:356.2,y:171.1},0).wait(1).to({scaleX:2.91,scaleY:2.39,x:359.5,y:174.8},0).wait(1).to({scaleX:2.99,scaleY:2.45,x:362.8,y:178.4},0).wait(1).to({scaleX:3.08,scaleY:2.51,x:366.2,y:182.1},0).wait(1).to({scaleX:3.16,scaleY:2.57,x:369.5,y:185.7},0).wait(1).to({scaleX:3.24,scaleY:2.63,x:372.8,y:189.4},0).wait(1).to({scaleX:3.32,scaleY:2.69,x:376.2,y:193.1},0).wait(1).to({scaleX:3.41,scaleY:2.75,x:379.5,y:196.7},0).wait(1).to({scaleX:3.49,scaleY:2.81,x:382.9,y:200.4},0).wait(1).to({scaleX:3.57,scaleY:2.87,x:386.2,y:204},0).wait(1).to({scaleX:3.66,scaleY:2.93,x:389.5,y:207.7},0).wait(1).to({scaleX:3.74,scaleY:2.99,x:392.9,y:211.4},0).wait(1).to({scaleX:3.82,scaleY:3.05,x:396.2,y:215},0).wait(1).to({scaleX:3.91,scaleY:3.11,x:399.5,y:218.6},0).wait(1).to({scaleX:3.99,scaleY:3.17,x:402.8,y:222.3},0).wait(1).to({scaleX:4.07,scaleY:3.23,x:406.2,y:226},0).wait(1).to({scaleX:4.15,scaleY:3.29,x:409.5,y:229.7},0).wait(1).to({scaleX:4.24,scaleY:3.35,x:412.8,y:233.3},0).wait(1).to({scaleX:4.32,scaleY:3.41,x:416.2,y:237},0).wait(1).to({scaleX:4.4,scaleY:3.47,x:419.5,y:240.6},0).wait(1).to({scaleX:4.49,scaleY:3.53,x:422.8,y:244.3},0).wait(1).to({scaleX:4.57,scaleY:3.6,x:426.2,y:248},0).wait(1).to({scaleX:4.65,scaleY:3.66,x:429.5,y:251.6},0).wait(1).to({scaleX:4.74,scaleY:3.72,x:432.8,y:255.3},0).wait(1).to({scaleX:4.82,scaleY:3.78,x:436.1,y:258.9},0).wait(1).to({scaleX:4.9,scaleY:3.84,x:439.5,y:262.6},0).wait(1).to({scaleX:4.98,scaleY:3.9,x:442.8,y:266.2},0).wait(1).to({scaleX:5.07,scaleY:3.96,x:446.2,y:269.9},0).wait(1).to({scaleX:5.15,scaleY:4.02,x:449.5,y:273.6},0).wait(1).to({scaleX:5.23,scaleY:4.08,x:452.8,y:277.2},0).wait(1).to({scaleX:5.32,scaleY:4.14,x:456.2,y:280.8},0).wait(1).to({scaleX:5.4,scaleY:4.2,x:459.5,y:284.5},0).wait(1).to({scaleX:5.48,scaleY:4.26,x:462.2,y:287.9},0).wait(1).to({scaleX:5.57,scaleY:4.32,x:465,y:291.3},0).wait(1).to({scaleX:5.65,scaleY:4.38,x:467.7,y:294.7},0).wait(1).to({scaleX:5.73,scaleY:4.44,x:470.5,y:298.1},0).wait(1).to({scaleX:5.81,scaleY:4.5,x:473.2,y:301.5},0).wait(1).to({scaleX:5.9,scaleY:4.56,x:475.9,y:304.8},0).wait(1).to({scaleX:5.98,scaleY:4.62,x:478.7,y:308.3},0).wait(1).to({scaleX:6.06,scaleY:4.68,x:481.4,y:311.6},0).wait(1).to({scaleX:6.15,scaleY:4.74,x:484.1,y:315},0).wait(1).to({scaleX:6.23,scaleY:4.8,x:486.9,y:318.4},0).wait(1).to({scaleX:6.31,scaleY:4.86,x:489.6,y:321.8},0).wait(1).to({scaleX:6.4,scaleY:4.92,x:492.4,y:325.2},0).wait(1).to({scaleX:6.48,scaleY:4.98,x:495.1,y:328.6},0).wait(1).to({scaleX:6.56,scaleY:5.04,x:497.8,y:332},0).wait(1).to({scaleX:6.64,scaleY:5.1,x:500,y:334.7},0).wait(1).to({scaleX:6.73,scaleY:5.16,x:502.2,y:337.6},0).wait(1).to({scaleX:6.81,scaleY:5.22,x:504.3,y:340.3},0).wait(1).to({scaleX:6.89,scaleY:5.28,x:506.4,y:343.1},0).wait(1).to({scaleX:6.98,scaleY:5.35,x:508.6,y:345.9},0).wait(1).to({scaleX:7.06,scaleY:5.41,x:510.7,y:348.6},0).wait(1).to({scaleX:7.14,scaleY:5.47,x:519.6,y:369.6},0).wait(1));
+	// Layer 9
+	this.instance_1 = new lib.Symbol2();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(180.8,122.3,1,1,0,0,0,22.3,32.8);
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({regX:22.2,scaleX:1.04,scaleY:1.04,x:178.1,y:125.1},0).wait(1).to({scaleX:1.08,scaleY:1.08,x:175.5,y:127.9},0).wait(1).to({scaleX:1.12,scaleY:1.11,x:172.8,y:130.8},0).wait(1).to({scaleX:1.16,scaleY:1.15,x:170.2,y:133.6},0).wait(1).to({scaleX:1.2,scaleY:1.19,x:167.6,y:136.5},0).wait(1).to({scaleX:1.24,scaleY:1.23,x:165,y:139.2},0).wait(1).to({scaleX:1.27,scaleY:1.26,x:162.4,y:142.1},0).wait(1).to({scaleX:1.31,scaleY:1.3,x:159.7,y:144.9},0).wait(1).to({scaleX:1.35,scaleY:1.34,x:157.1,y:147.7},0).wait(1).to({scaleX:1.39,scaleY:1.38,x:154.5,y:150.6},0).wait(1).to({scaleX:1.43,scaleY:1.41,x:151.9,y:153.4},0).wait(1).to({scaleX:1.47,scaleY:1.45,x:149.3,y:156.2},0).wait(1).to({scaleX:1.51,scaleY:1.49,x:146.7,y:159},0).wait(1).to({scaleX:1.55,scaleY:1.53,x:144.1,y:161.9},0).wait(1).to({scaleX:1.59,scaleY:1.57,x:141.4,y:164.7},0).wait(1).to({scaleX:1.63,scaleY:1.6,x:138.8,y:167.5},0).wait(1).to({scaleX:1.67,scaleY:1.64,x:136.2,y:170.4},0).wait(1).to({scaleX:1.71,scaleY:1.68,x:133.6,y:173.2},0).wait(1).to({scaleX:1.75,scaleY:1.72,x:131,y:176},0).wait(1).to({scaleX:1.79,scaleY:1.75,x:128.3,y:178.8},0).wait(1).to({scaleX:1.82,scaleY:1.79,x:125.7,y:181.7},0).wait(1).to({scaleX:1.86,scaleY:1.83,x:123.1,y:184.5},0).wait(1).to({scaleX:1.9,scaleY:1.87,x:120.5,y:187.3},0).wait(1).to({scaleX:1.94,scaleY:1.9,x:117.9,y:190.1},0).wait(1).to({scaleX:1.98,scaleY:1.94,x:115.3,y:193},0).wait(1).to({scaleX:2.02,scaleY:1.98,x:112.6,y:195.8},0).wait(1).to({scaleX:2.06,scaleY:2.02,x:110,y:198.6},0).wait(1).to({scaleX:2.1,scaleY:2.06,x:107.4,y:201.5},0).wait(1).to({scaleX:2.14,scaleY:2.09,x:104.8,y:204.3},0).wait(1).to({scaleX:2.18,scaleY:2.13,x:102.2,y:207.1},0).wait(1).to({scaleX:2.22,scaleY:2.17,x:99.5,y:209.9},0).wait(1).to({scaleX:2.26,scaleY:2.21,x:96.9,y:212.8},0).wait(1).to({scaleX:2.3,scaleY:2.24,x:94.3,y:215.6},0).wait(1).to({scaleX:2.33,scaleY:2.28,x:91.7,y:218.4},0).wait(1).to({scaleX:2.37,scaleY:2.32,x:89.1,y:221.3},0).wait(1).to({scaleX:2.41,scaleY:2.36,x:86.4,y:224.1},0).wait(1).to({scaleX:2.45,scaleY:2.39,x:83.8,y:226.9},0).wait(1).to({scaleX:2.49,scaleY:2.43,x:81.2,y:229.7},0).wait(1).to({scaleX:2.53,scaleY:2.47,x:78.6,y:232.6},0).wait(1).to({scaleX:2.57,scaleY:2.51,x:76,y:235.4},0).wait(1).to({scaleX:2.61,scaleY:2.55,x:73.3,y:238.2},0).wait(1).to({scaleX:2.65,scaleY:2.58,x:70.8,y:241},0).wait(1).to({scaleX:2.69,scaleY:2.62,x:68.1,y:243.9},0).wait(1).to({scaleX:2.73,scaleY:2.66,x:65.5,y:246.7},0).wait(1).to({scaleX:2.77,scaleY:2.7,x:62.9,y:249.5},0).wait(1).to({scaleX:2.81,scaleY:2.73,x:60.3,y:252.4},0).wait(1).to({scaleX:2.84,scaleY:2.77,x:57.7,y:255.2},0).wait(1).to({scaleX:2.88,scaleY:2.81,x:55.1,y:258},0).wait(1).to({scaleX:2.92,scaleY:2.85,x:52.5,y:260.8},0).wait(1).to({scaleX:2.96,scaleY:2.88,x:49.8,y:263.7},0).wait(1).to({scaleX:3,scaleY:2.92,x:47.2,y:266.5},0).wait(1).to({scaleX:3.04,scaleY:2.96,x:44.6,y:269.3},0).wait(1).to({scaleX:3.08,scaleY:3,x:42,y:272.1},0).wait(1).to({scaleX:3.12,scaleY:3.03,x:39.4,y:275},0).wait(1).to({scaleX:3.16,scaleY:3.07,x:36.7,y:277.8},0).wait(1).to({scaleX:3.2,scaleY:3.11,x:34.2,y:280.6},0).wait(1).to({scaleX:3.24,scaleY:3.15,x:31.5,y:283.5},0).wait(1).to({scaleX:3.28,scaleY:3.19,x:28.9,y:286.3},0).wait(1).to({scaleX:3.32,scaleY:3.22,x:26.3,y:289.1},0).wait(1).to({scaleX:3.36,scaleY:3.26,x:23.6,y:291.9},0).wait(1).to({scaleX:3.39,scaleY:3.3,x:21.1,y:294.8},0).wait(1).to({scaleX:3.43,scaleY:3.34,x:18.4,y:297.6},0).wait(1).to({scaleX:3.47,scaleY:3.37,x:15.8,y:300.4},0).wait(1).to({scaleX:3.51,scaleY:3.41,x:13.2,y:303.3},0).wait(1).to({scaleX:3.55,scaleY:3.45,x:10.6,y:306},0).wait(1).to({scaleX:3.59,scaleY:3.49,x:8,y:308.9},0).wait(1).to({scaleX:3.63,scaleY:3.52,x:5.3,y:311.7},0).wait(1).to({scaleX:3.67,scaleY:3.56,x:2.7,y:314.6},0).wait(1).to({scaleX:3.71,scaleY:3.6,x:0.1,y:317.4},0).wait(1).to({scaleX:3.75,scaleY:3.64,x:-2.5,y:320.2},0).wait(1).to({scaleX:3.79,scaleY:3.68,x:-5.1,y:323},0).wait(1).to({scaleX:3.83,scaleY:3.71,x:-7.7,y:325.8},0).wait(1).to({scaleX:3.87,scaleY:3.75,x:-10.4,y:328.7},0).wait(1).to({scaleX:3.9,scaleY:3.79,x:-13,y:331.5},0).wait(1).to({scaleX:3.94,scaleY:3.83,x:-15.6,y:334.4},0).wait(1).to({scaleX:3.98,scaleY:3.86,x:-18.2,y:337.2},0).wait(1).to({scaleX:4.02,scaleY:3.9,x:-20.8,y:340},0).wait(1).to({scaleX:4.06,scaleY:3.94,x:-23.5,y:342.8},0).wait(1).to({scaleX:4.1,scaleY:3.98,x:-26.1,y:345.6},0).wait(1).to({scaleX:4.14,scaleY:4.01,x:-28.7,y:348.5},0).wait(1).to({scaleX:4.18,scaleY:4.05,x:-31.3,y:351.3},0).wait(1).to({scaleX:4.22,scaleY:4.09,x:-33.9,y:354.2},0).wait(1).to({scaleX:4.26,scaleY:4.13,x:-36.6,y:356.9},0).wait(1).to({scaleX:4.3,scaleY:4.17,x:-39.1,y:359.8},0).wait(1).to({scaleX:4.34,scaleY:4.2,x:-41.8,y:362.6},0).wait(1).to({scaleX:4.38,scaleY:4.24,x:-44.4,y:365.5},0).wait(1).to({scaleX:4.41,scaleY:4.28,x:-47,y:368.3},0).wait(1).to({scaleX:4.45,scaleY:4.32,x:-49.7,y:371.1},0).wait(1).to({scaleX:4.49,scaleY:4.35,x:-52.2,y:373.9},0).wait(1).to({scaleX:4.53,scaleY:4.39,x:-54.9,y:376.7},0).wait(1).to({scaleX:4.57,scaleY:4.43,x:-57.5,y:379.6},0).wait(1).to({scaleX:4.61,scaleY:4.47,x:-60.1,y:382.4},0).wait(1).to({scaleX:4.65,scaleY:4.5,x:-62.8,y:385.3},0).wait(1).to({scaleX:4.69,scaleY:4.54,x:-65.3,y:388.1},0).wait(1).to({scaleX:4.73,scaleY:4.58,x:-68,y:390.9},0).wait(1).to({scaleX:4.77,scaleY:4.62,x:-70.6,y:393.7},0).wait(1).to({scaleX:4.81,scaleY:4.66,x:-73.2,y:396.5},0).wait(1).to({scaleX:4.85,scaleY:4.69,x:-75.8,y:399.4},0).wait(1).to({scaleX:4.89,scaleY:4.73,x:-78.4,y:402.2},0).wait(1).to({scaleX:4.92,scaleY:4.77,x:-81.1,y:405.1},0).wait(1).to({regX:22.1,regY:32.9,scaleX:5,scaleY:4.84,x:-106.1,y:411.3},0).to({_off:true},1).wait(48));
+	// Layer 4
+	this.instance_2 = new lib.Symbol11();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(217,116.5,1,1,0,0,0,6,19.5);
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1).to({y:117.1},0).wait(1).to({y:117.8},0).wait(1).to({y:118.4},0).wait(1).to({y:119.1},0).wait(1).to({y:119.7},0).wait(1).to({y:120.4},0).wait(1).to({y:121},0).wait(1).to({y:121.6},0).wait(1).to({y:122.3},0).wait(1).to({y:122.9},0).wait(1).to({y:123.6},0).wait(1).to({y:124.2},0).wait(1).to({y:124.8},0).wait(1).to({y:125.5},0).wait(1).to({y:126.1},0).wait(1).to({y:126.8},0).wait(1).to({y:127.4},0).wait(1).to({y:128.1},0).wait(1).to({y:128.7},0).wait(1).to({y:129.3},0).wait(1).to({y:130},0).wait(1).to({y:130.6},0).wait(1).to({y:131.3},0).wait(1).to({y:131.9},0).wait(1).to({y:132.5},0).wait(1).to({y:133.2},0).wait(1).to({y:133.8},0).wait(1).to({y:134.5},0).wait(1).to({y:135.1},0).wait(1).to({y:135.8},0).wait(1).to({y:136.4},0).wait(1).to({y:137},0).wait(1).to({y:137.7},0).wait(1).to({y:138.3},0).wait(1).to({y:139},0).wait(1).to({y:139.6},0).wait(1).to({y:140.2},0).wait(1).to({y:140.9},0).wait(1).to({y:141.5},0).wait(1).to({y:142.2},0).wait(1).to({y:142.8},0).wait(1).to({y:143.5},0).wait(1).to({y:144.1},0).wait(1).to({y:144.7},0).wait(1).to({y:145.4},0).wait(1).to({y:146},0).wait(1).to({y:146.7},0).wait(1).to({y:147.3},0).wait(1).to({y:148},0).wait(1).to({y:149},0).wait(1).to({y:150.1},0).wait(1).to({y:151.1},0).wait(1).to({y:152.2},0).wait(1).to({y:153.3},0).wait(1).to({y:154.3},0).wait(1).to({y:155.4},0).wait(1).to({y:156.4},0).wait(1).to({y:157.5},0).wait(1).to({y:158.6},0).wait(1).to({y:159.6},0).wait(1).to({y:160.7},0).wait(1).to({y:161.7},0).wait(1).to({y:162.8},0).wait(1).to({y:163.9},0).wait(1).to({y:164.9},0).wait(1).to({y:166},0).wait(1).to({y:167},0).wait(1).to({y:168.1},0).wait(1).to({y:169.2},0).wait(1).to({y:170.2},0).wait(1).to({y:171.3},0).wait(1).to({y:172.3},0).wait(1).to({y:173.4},0).wait(1).to({y:174.5},0).wait(1).to({y:175.5},0).wait(1).to({y:176.6},0).wait(1).to({y:177.6},0).wait(1).to({y:178.7},0).wait(1).to({y:179.8},0).wait(1).to({y:180.8},0).wait(1).to({y:181.9},0).wait(1).to({y:182.9},0).wait(1).to({y:184},0).wait(1).to({y:185.1},0).wait(1).to({y:186.1},0).wait(1).to({y:187.2},0).wait(1).to({y:188.2},0).wait(1).to({y:189.3},0).wait(1).to({y:190.4},0).wait(1).to({y:191.4},0).wait(1).to({y:192.5},0).wait(1).to({y:193.5},0).wait(1).to({y:194.6},0).wait(1).to({y:195.7},0).wait(1).to({y:196.7},0).wait(1).to({y:197.8},0).wait(1).to({y:198.8},0).wait(1).to({y:199.9},0).wait(1).to({y:201},0).wait(1).to({y:202.2},0).wait(1).to({y:203.5},0).wait(1).to({y:204.8},0).wait(1).to({y:206.1},0).wait(1).to({y:207.4},0).wait(1).to({y:208.6},0).wait(1).to({y:209.9},0).wait(1).to({y:211.2},0).wait(1).to({y:212.5},0).wait(1).to({y:213.8},0).wait(1).to({y:215},0).wait(1).to({y:216.3},0).wait(1).to({y:217.6},0).wait(1).to({y:218.9},0).wait(1).to({y:220.2},0).wait(1).to({y:221.4},0).wait(1).to({y:222.7},0).wait(1).to({y:224},0).wait(1).to({y:225.3},0).wait(1).to({y:226.6},0).wait(1).to({y:227.8},0).wait(1).to({y:229.1},0).wait(1).to({y:230.4},0).wait(1).to({y:231.7},0).wait(1).to({y:233},0).wait(1).to({y:234.2},0).wait(1).to({y:235.5},0).wait(1).to({y:236.8},0).wait(1).to({y:238.1},0).wait(1).to({y:239.4},0).wait(1).to({y:240.6},0).wait(1).to({y:241.9},0).wait(1).to({y:243.2},0).wait(1).to({y:244.5},0).wait(1).to({y:245.8},0).wait(1).to({y:247},0).wait(1).to({y:248.3},0).wait(1).to({y:249.6},0).wait(1).to({y:250.9},0).wait(1).to({y:252.2},0).wait(1).to({y:253.4},0).wait(1).to({y:254.7},0).wait(1).to({y:256},0).wait(1).to({y:257.3},0).wait(1).to({y:258.6},0).wait(1).to({y:259.8},0).wait(1).to({y:261.1},0).wait(1).to({y:262.4},0).wait(1).to({y:263.7},0).wait(1).to({y:265},0).wait(1));
+	// Layer 3
+	this.instance_3 = new lib.Symbol10();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(217,164.5,1,1,0,0,0,6,19.5);
+	this.instance_4 = new lib.Symbol13();
+	this.instance_4.parent = this;
+	this.instance_4.setTransform(217,170.5,1,1,0,0,0,6,19.5);
+	this.instance_4._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1).to({y:165.5},0).wait(1).to({y:166.4},0).wait(1).to({y:167.4},0).wait(1).to({y:168.3},0).wait(1).to({y:169.3},0).wait(1).to({y:170.3},0).wait(1).to({y:171.2},0).wait(1).to({y:172.2},0).wait(1).to({y:173.1},0).wait(1).to({y:174.1},0).wait(1).to({y:175},0).wait(1).to({y:176},0).wait(1).to({y:177},0).wait(1).to({y:177.9},0).wait(1).to({y:178.9},0).wait(1).to({y:179.8},0).wait(1).to({y:180.8},0).wait(1).to({y:181.8},0).wait(1).to({y:182.7},0).wait(1).to({y:183.7},0).wait(1).to({y:184.6},0).wait(1).to({y:185.6},0).wait(1).to({y:186.5},0).wait(1).to({y:187.5},0).wait(1).to({y:188.5},0).wait(1).to({y:189.4},0).wait(1).to({y:190.4},0).wait(1).to({y:191.3},0).wait(1).to({y:192.3},0).wait(1).to({y:193.3},0).wait(1).to({y:194.2},0).wait(1).to({y:195.2},0).wait(1).to({y:196.1},0).wait(1).to({y:197.1},0).wait(1).to({y:198},0).wait(1).to({y:199},0).wait(1).to({y:200},0).wait(1).to({y:200.9},0).wait(1).to({y:201.9},0).wait(1).to({y:202.8},0).wait(1).to({y:203.8},0).wait(1).to({y:204.8},0).wait(1).to({y:205.7},0).wait(1).to({y:206.7},0).wait(1).to({y:207.6},0).wait(1).to({y:208.6},0).wait(1).to({y:209.5},0).wait(1).to({y:210.5},0).wait(1).to({y:203.6},0).wait(1).to({y:204.8},0).wait(1).to({y:206.1},0).wait(1).to({y:207.3},0).wait(1).to({y:208.5},0).wait(1).to({y:209.8},0).wait(1).to({y:211},0).wait(1).to({y:212.2},0).wait(1).to({y:213.5},0).wait(1).to({y:214.7},0).wait(1).to({y:216},0).wait(1).to({y:217.2},0).wait(1).to({y:218.4},0).wait(1).to({y:219.7},0).wait(1).to({y:220.9},0).wait(1).to({y:222.2},0).wait(1).to({y:223.4},0).wait(1).to({y:224.6},0).wait(1).to({y:225.9},0).wait(1).to({y:227.1},0).wait(1).to({y:228.3},0).wait(1).to({y:229.6},0).wait(1).to({y:230.8},0).wait(1).to({y:232.1},0).wait(1).to({y:233.3},0).wait(1).to({y:234.5},0).wait(1).to({y:235.8},0).wait(1).to({y:237},0).wait(1).to({y:238.3},0).wait(1).to({y:239.5},0).wait(1).to({y:240.7},0).wait(1).to({y:242},0).wait(1).to({y:243.2},0).wait(1).to({y:244.4},0).wait(1).to({y:245.7},0).wait(1).to({y:246.9},0).wait(1).to({y:248.2},0).wait(1).to({y:249.4},0).wait(1).to({y:250.6},0).wait(1).to({y:251.9},0).wait(1).to({y:253.1},0).wait(1).to({y:254.4},0).wait(1).to({y:255.6},0).wait(1).to({y:256.8},0).wait(1).to({y:258.1},0).wait(1).to({y:259.3},0).wait(1).to({y:260.5},0).wait(1).to({y:261.8},0).wait(1).to({y:263},0).wait(1).to({y:264.3},0).wait(1).to({y:265.5},0).to({_off:true},1).wait(50));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(100).to({_off:false},0).wait(1).to({y:110.7},0).wait(1).to({y:111.2},0).wait(1).to({y:111.6},0).wait(1).to({y:112.1},0).wait(1).to({y:112.6},0).wait(1).to({y:113.1},0).wait(1).to({y:113.5},0).wait(1).to({y:114},0).wait(1).to({y:114.5},0).wait(1).to({y:115},0).wait(1).to({y:115.4},0).wait(1).to({y:115.9},0).wait(1).to({y:116.4},0).wait(1).to({y:116.9},0).wait(1).to({y:117.3},0).wait(1).to({y:117.8},0).wait(1).to({y:118.3},0).wait(1).to({y:118.8},0).wait(1).to({y:119.2},0).wait(1).to({y:119.7},0).wait(1).to({y:120.2},0).wait(1).to({y:120.7},0).wait(1).to({y:121.1},0).wait(1).to({y:121.6},0).wait(1).to({y:122.1},0).wait(1).to({y:122.6},0).wait(1).to({y:123},0).wait(1).to({y:123.5},0).wait(1).to({y:124},0).wait(1).to({y:124.5},0).wait(1).to({y:124.9},0).wait(1).to({y:125.4},0).wait(1).to({y:125.9},0).wait(1).to({y:126.4},0).wait(1).to({y:126.8},0).wait(1).to({y:127.3},0).wait(1).to({y:127.8},0).wait(1).to({y:128.3},0).wait(1).to({y:128.7},0).wait(1).to({y:129.2},0).wait(1).to({y:129.7},0).wait(1).to({y:130.2},0).wait(1).to({y:130.6},0).wait(1).to({y:131.1},0).wait(1).to({y:131.6},0).wait(1).to({y:132.1},0).wait(1).to({y:132.5},0).wait(1).to({y:133},0).wait(1).to({y:110.7},0).wait(1));
+	// Layer 2
+	this.instance_5 = new lib.Symbol9();
+	this.instance_5.parent = this;
+	this.instance_5.setTransform(217,220.5,1,1,0,0,0,6,19.5);
+	this.instance_6 = new lib.Symbol12();
+	this.instance_6.parent = this;
+	this.instance_6.setTransform(217,113.5,1,1,0,0,0,6,19.5);
+	this.instance_6._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(1).to({y:221.3},0).wait(1).to({y:222.1},0).wait(1).to({y:222.9},0).wait(1).to({y:223.7},0).wait(1).to({y:224.5},0).wait(1).to({y:225.3},0).wait(1).to({y:226.1},0).wait(1).to({y:226.9},0).wait(1).to({y:227.7},0).wait(1).to({x:216.9,y:228.5},0).wait(1).to({y:229.3},0).wait(1).to({y:230.1},0).wait(1).to({y:230.8},0).wait(1).to({y:231.6},0).wait(1).to({y:232.4},0).wait(1).to({y:233.2},0).wait(1).to({y:234},0).wait(1).to({y:234.8},0).wait(1).to({y:235.6},0).wait(1).to({y:236.4},0).wait(1).to({y:237.2},0).wait(1).to({y:238},0).wait(1).to({y:238.8},0).wait(1).to({y:239.6},0).wait(1).to({y:240.4},0).wait(1).to({y:241.2},0).wait(1).to({y:242},0).wait(1).to({y:242.8},0).wait(1).to({y:243.6},0).wait(1).to({x:216.8,y:244.4},0).wait(1).to({y:245.2},0).wait(1).to({y:246},0).wait(1).to({y:246.8},0).wait(1).to({y:247.6},0).wait(1).to({y:248.4},0).wait(1).to({y:249.2},0).wait(1).to({y:249.9},0).wait(1).to({y:250.7},0).wait(1).to({y:251.5},0).wait(1).to({y:252.3},0).wait(1).to({y:253.1},0).wait(1).to({y:253.9},0).wait(1).to({y:254.7},0).wait(1).to({y:255.5},0).wait(1).to({y:256.3},0).wait(1).to({y:257.1},0).wait(1).to({y:257.9},0).wait(1).to({y:258.7},0).wait(1).to({y:259.5},0).to({_off:true},1).wait(100));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(50).to({_off:false},0).wait(1).to({y:114},0).wait(1).to({y:114.5},0).wait(1).to({y:115},0).wait(1).to({y:115.5},0).wait(1).to({y:116.1},0).wait(1).to({y:116.6},0).wait(1).to({y:117.1},0).wait(1).to({y:117.6},0).wait(1).to({y:118.1},0).wait(1).to({y:118.6},0).wait(1).to({y:119.1},0).wait(1).to({y:119.6},0).wait(1).to({y:120.1},0).wait(1).to({y:120.6},0).wait(1).to({y:121.2},0).wait(1).to({y:121.7},0).wait(1).to({y:122.2},0).wait(1).to({y:122.7},0).wait(1).to({y:123.2},0).wait(1).to({y:123.7},0).wait(1).to({y:124.2},0).wait(1).to({y:124.7},0).wait(1).to({y:125.2},0).wait(1).to({y:125.7},0).wait(1).to({y:126.3},0).wait(1).to({y:126.8},0).wait(1).to({y:127.3},0).wait(1).to({y:127.8},0).wait(1).to({y:128.3},0).wait(1).to({y:128.8},0).wait(1).to({y:129.3},0).wait(1).to({y:129.8},0).wait(1).to({y:130.3},0).wait(1).to({y:130.8},0).wait(1).to({y:131.4},0).wait(1).to({y:131.9},0).wait(1).to({y:132.4},0).wait(1).to({y:132.9},0).wait(1).to({y:133.4},0).wait(1).to({y:133.9},0).wait(1).to({y:134.4},0).wait(1).to({y:134.9},0).wait(1).to({y:135.4},0).wait(1).to({y:135.9},0).wait(1).to({y:136.5},0).wait(1).to({y:137},0).wait(1).to({y:137.5},0).wait(1).to({y:138},0).wait(1).to({y:138.5},0).wait(1).to({y:139.8},0).wait(1).to({y:141.1},0).wait(1).to({y:142.3},0).wait(1).to({y:143.6},0).wait(1).to({y:144.9},0).wait(1).to({y:146.2},0).wait(1).to({y:147.5},0).wait(1).to({y:148.7},0).wait(1).to({y:150},0).wait(1).to({y:151.3},0).wait(1).to({y:152.6},0).wait(1).to({y:153.9},0).wait(1).to({y:155.1},0).wait(1).to({y:156.4},0).wait(1).to({y:157.7},0).wait(1).to({y:159},0).wait(1).to({y:160.3},0).wait(1).to({y:161.5},0).wait(1).to({y:162.8},0).wait(1).to({y:164.1},0).wait(1).to({y:165.4},0).wait(1).to({y:166.7},0).wait(1).to({y:167.9},0).wait(1).to({y:169.2},0).wait(1).to({y:170.5},0).wait(1).to({y:171.8},0).wait(1).to({y:173.1},0).wait(1).to({y:174.3},0).wait(1).to({y:175.6},0).wait(1).to({y:176.9},0).wait(1).to({y:178.2},0).wait(1).to({y:179.5},0).wait(1).to({y:180.7},0).wait(1).to({y:182},0).wait(1).to({y:183.3},0).wait(1).to({y:184.6},0).wait(1).to({y:185.9},0).wait(1).to({y:187.1},0).wait(1).to({y:188.4},0).wait(1).to({y:189.7},0).wait(1).to({y:191},0).wait(1).to({y:192.3},0).wait(1).to({y:193.5},0).wait(1).to({y:194.8},0).wait(1).to({y:196.1},0).wait(1).to({y:197.4},0).wait(1).to({y:198.7},0).wait(1).to({y:199.9},0).wait(1).to({y:201.2},0).wait(1).to({y:202.5},0).wait(1));
+	// Layer 1
+	this.instance_7 = new lib.picture();
+	this.instance_7.parent = this;
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(1,1,1).p("ABRoNQgBgLAAgFQgCgKgGgGQgLgMgiAFQgcAEgSAHQgMAEgJAFQgMAHgJAIQgRARgBAbQgCAbAUANQAHgGAGgGAgoogIAAALAAWmcQgBADgBACQgCAEgHAJQgGAIgCAEQgFANAAAdIAACtAAWl8IAAggIAAgXQAGAKgGANAAynHQAaBJgCB8QgBBIAAAwQAGi0ABisAgnm1IAAPrQAzhMAYhxQAPhJAJiGQAIidAFiXQAAA/ADAV");
+	this.shape.setTransform(211,56.9);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().p("Ag6m7IgEgIIgFgNIgHgTQgJgcAIgMQAEgHAMgKIACgBIAGgHIAHgGQAGgFAQAAQAjAAAPAKIASANQAFACALACIADABQALADADAHQACAHgDAGQgDAGgGADIgIACQgBCsgGC0IAAgGIABhxIAAgSQAAhwgYhEQAYBEAABwIAAASIgBBxIAAAGQgFCXgICdQgJCGgPBJQgXBxg0BNgAADmiIgCAFIgIAMIgIANQgGAMAAAdIAACuIAAiuQAAgdAGgMIAIgNIAIgMIACgFQAGgOgGgKIAAAYIAAAAgAADmDIAAgfgAA2iRIAAAAg");
+	this.shape_1.setTransform(212.9,57.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.instance_7}]}).to({state:[{t:this.instance_7}]},149).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(213.5,119.2,427,240.8);
+// library properties:
+lib.properties = {
+	width: 427,
+	height: 240,
+	fps: 24,
+	color: "#FFFFFF",
+	opacity: 1.00,
+	webfonts: {},
+	manifest: [
+		{src:"images/lab4 _ Copy_atlas_.png", id:"lab4 _ Copy_atlas_"}
+	],
+	preloads: []
+};
+})(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{}, AdobeAn = AdobeAn||{});
+var lib, images, createjs, ss, AdobeAn;
+</script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	images = images||{};
+	ss = ss||{};
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt) {	
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.lab4Copy();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:427px; height:240px">
+		<canvas id="canvas" width="427" height="240" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:427px; height:240px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+</body>
+</html>
