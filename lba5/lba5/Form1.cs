@@ -15,13 +15,15 @@ namespace lba5
     public partial class Form1 : Form
     {
 
-        Glu.GLUquadric cylinder, conus;
-        private int angle1 = 90, angle2 = 90;
+        Glu.GLUquadric cylinder, conus,platform;
+        private int angle1 = 90, angle2 = 90,angle3=90;
         private bool textureIsLoad;
         private int marbleid = 0;
         private int coneid = 0;
+        private int platformid = 0;
         public uint mGlTextureObjMarble = 0;
         public uint mGlTextureObjCone = 0;
+        public uint mGlTextureObjPlatform = 0;
 
         private static uint MakeGlTexture(int Format, IntPtr pixels, int w, int h)
         {
@@ -104,6 +106,34 @@ namespace lba5
                 Il.ilDeleteImages(1, ref coneid);
             }
         }
+        void SetTexturePlatform()
+        {
+            textureIsLoad = false;
+            Il.ilGenImages(1, out platformid);
+            Il.ilBindImage(coneid);
+            if (Il.ilLoadImage(System.IO.Path.GetFullPath(@"Images\3.jpg")))
+            {
+
+                int width = Il.ilGetInteger(Il.IL_IMAGE_WIDTH);
+                int height = Il.ilGetInteger(Il.IL_IMAGE_HEIGHT);
+
+                int bitspp = Il.ilGetInteger(Il.IL_IMAGE_BITS_PER_PIXEL);
+
+                switch (bitspp)
+                {
+                    case 24:
+                        mGlTextureObjPlatform = MakeGlTexture(Gl.GL_RGB, Il.ilGetData(), width, height);
+                        break;
+                    case 32:
+                        mGlTextureObjPlatform = MakeGlTexture(Gl.GL_RGBA, Il.ilGetData(), width, height);
+                        break;
+                }
+
+                textureIsLoad = true;
+
+                Il.ilDeleteImages(1, ref platformid);
+            }
+        }
         public Form1()
         {
             InitializeComponent();
@@ -128,9 +158,10 @@ namespace lba5
             Gl.glEnable(Gl.GL_LIGHT0);
             cylinder = Glu.gluNewQuadric();
             conus = Glu.gluNewQuadric();
+            platform = Glu.gluNewQuadric();
             SetTextureCylinder();
             SetTextureCone();
-            
+            SetTexturePlatform();
         }
         float g_FogDensity = 0.2f;
         float[] fogColor = { 0.5f, 0.5f, .5f, 1.0f };
@@ -159,6 +190,18 @@ namespace lba5
         {
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);
             Gl.glLoadIdentity();
+
+            Gl.glPushMatrix();
+            Gl.glTranslated(0, -2, -6);
+            Gl.glRotated(angle3, 0, 1, 0);
+            Gl.glEnable(Gl.GL_TEXTURE_2D);
+            Gl.glBindTexture(Gl.GL_TEXTURE_2D, mGlTextureObjPlatform);
+            Glu.gluQuadricDrawStyle(platform, Glu.GLU_FILL);
+            Glu.gluQuadricTexture(platform, Gl.GL_TRUE);
+            Gl.glEnable(Gl.GL_TEXTURE_2D);
+            Glut.glutSolidCube(0.75);
+            Gl.glDisable(Gl.GL_TEXTURE_2D);
+            Gl.glPopMatrix();
 
             Gl.glPushMatrix();
             Gl.glTranslated(0, 0, -6);
@@ -197,6 +240,7 @@ namespace lba5
             canvas.Invalidate();
             angle1 += 10;
             angle2 -= 10;
+            angle3 += 5;
         }
 
         private void button1_Click(object sender, EventArgs e)
